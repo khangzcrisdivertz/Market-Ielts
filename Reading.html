@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - BocuaIelts</title>
+   <link href="Style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Protest+Strike&family=Reem+Kufi+Fun:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik+Doodle+Shadow&family=Rubik+Iso&family=Rubik+Vinyl&family=Sriracha&display=swap"
+      rel="stylesheet"
+    />
+    <link href="index.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Protest+Strike&family=Reem+Kufi+Fun:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik+Doodle+Shadow&family=Rubik+Glitch&family=Rubik+Iso&family=Rubik+Vinyl&family=Sriracha&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body style="background-color: #212121">
+    <nav class="container-nav main-nav">
+      <div class="logo rubik-doodle-shadow-regular">Ielts Market</div>
+      <div class="list-nav">
+        <li><a href="index.html">Home</a></li>
+         <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="#">Ielts practice</a></li>
+        <li><a href="#">Product to improve</a></li>
+        <li><a href="#">Login</a></li>
+      </div>
+      <div class="input-container">
+        <input
+          placeholder="Search anything..."
+          type="text"
+          name="text"
+          class="input"
+        />
+      </div>
+    </nav>
+
+  <div class="reading-header protest-strike-regular">
+  <h4>IELTS Reading</h4>
+
+</div>
+   <div class="container-card">
+  <div class="reading-list" id="list-card"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="allreading.js"></script>
+
+    <style>
+      .reading-list{
+display: grid;
+grid-template-columns: auto auto auto auto  auto;
+gap: 9px;
+      }
+
+
+
+      body {
+        margin: 0px;
+      }
+      .logo {
+        font-size: 40px;
+        color: white;
+      }
+      .main-nav {
+        padding-top: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 17px;
+      }
+      .main-nav li {
+        list-style: none;
+      }
+      .list-nav {
+        display: flex;
+        gap: 90px;
+      }
+      .main-nav a {
+        font-size: 20px;
+        display: block;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+      }
+
+      .protest-strike-regular {
+        font-family: "Protest Strike", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+      }
+
+      .rubik-doodle-shadow-regular {
+        font-family: "Rubik Doodle Shadow", system-ui;
+        font-weight: 400;
+        font-style: normal;
+      }
+    </style>
+  </body>
+</html>

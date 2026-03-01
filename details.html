@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading</title>
+</head>
+<body>
+
+      <!-- BACK BUTTON -->
+  <a href="index.html" class="reading-back-btn">
+    ← Back to Home
+  </a>
+
+
+<div class="reading-detail-wrapper" id="detail-container">
+  <!-- JS sẽ render nội dung vào đây -->
+</div>
+
+   <script src="detail.js"></script> 
+   <style>
+    /* ===== BACK TO HOME BUTTON ===== */
+.reading-back-btn {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 10px 18px;
+  background: #111827;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: all 0.25s ease;
+}
+
+/* hover */
+.reading-back-btn:hover {
+  background: #4f46e5;
+  transform: translateY(-2px);
+}
+
+/* để position absolute hoạt động */
+.reading-detail-wrapper {
+  position: relative;
+}
+  /* ===== IELTS READING DETAIL PAGE ===== */
+
+body {
+  background-color: #212121; /* giữ nền tối toàn trang */
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Khung trắng chính */
+.reading-detail-wrapper {
+  max-width: 1000px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+/* Title bài reading */
+.reading-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 20px;
+  border-left: 6px solid #4f46e5;
+  padding-left: 15px;
+}
+
+/* Đoạn văn reading */
+.reading-passage {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 35px;
+}
+
+/* Tiêu đề Questions */
+.reading-question-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #1f2937;
+}
+
+/* Danh sách câu hỏi */
+.reading-questions {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Mỗi câu hỏi */
+.reading-question {
+  background-color: #f9fafb;
+  padding: 18px 20px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+/* Text câu hỏi */
+.reading-question p {
+  margin: 0 0 10px;
+  font-weight: 500;
+  color: #111827;
+}
+
+/* Input trả lời */
+.reading-question input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+}
+
+.reading-question input:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+/* Button */
+.reading-submit-btn {
+  margin-top: 30px;
+  padding: 14px;
+  width: 100%;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.reading-submit-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+   </style>
+</body>
+</html>
