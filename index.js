@@ -22,7 +22,7 @@ fetch ('https://6975cb8ec0c36a2a994f782f.mockapi.io/all')
       Band: <span>${p.category}</span>
     </p>
 
-    <a href="details.html?id=${p.id}" class="reading-card__btn rubik-glitch-regular">
+    <a href="detailreading.html?id=${p.id}" class="reading-card__btn rubik-glitch-regular">
       See more
     </a>
   </div>
@@ -38,22 +38,27 @@ fetch ('https://6975cb8ec0c36a2a994f782f.mockapi.io/all')
     const listContainer = document.getElementById('list-card2');
     lisdata.forEach(l => {
       const listCard = document.createElement('div');
-     listCard.className = 'card'
+     listCard.className = 'reading-card'
      listCard.innerHTML = `
-     <div class="neo-card">
- <div class="neo-card__image">   
-            <img src="${l.img}" alt="Card Image">
-          </div>
+    <div class="reading-card__content protest-strike-regular">
+  <div class="reading-card__image">
+    <img src="${l.img}" alt="IELTS Reading">
+  </div>
 
-  <div class="neo-card__body">
-    <h3 class="neo-card__title">${l.title}</h3>
-    <p class="neo-card__desc">
-      ${l.category}
+
+
+    <h3 class="reading-card__title">
+      ${l.title}
+    </h3>
+
+    <p class="reading-card__level protest-strike-regular">
+      Band: <span>${l.category}</span>
     </p>
 
-    <a href="#" class="neo-card__btn">Explore now</a>
+    <a href="detailLis.html?id=${l.id}" class="reading-card__btn rubik-glitch-regular">
+      See more
+    </a>
   </div>
-</div>
      `
      listContainer.appendChild(listCard);
     });
@@ -61,8 +66,48 @@ fetch ('https://6975cb8ec0c36a2a994f782f.mockapi.io/all')
   })
   
 const button = document.getElementById('facebook');
-button.addEventListener("click", doST);
+button.addEventListener('click', doST);
 
 function doST(){
   alert("Hong be oi!");
+}
+
+fetch ('https://69b5096bbe587338e714d274.mockapi.io/all')
+.then(response => response.json())
+.then(sdata => {
+  const scContainer = document.getElementById('list-card3');
+  sdata.forEach(d => {
+    const card = document.createElement('div');
+    card.className = 'university-card'
+    card.innerHTML = `
+ 
+    <div class="card-content">
+        <h3 class="country">${d.country}</h3>
+
+        <p class="university">
+            <strong>University:</strong> ${d.university}
+        </p>
+
+        <p class="requirement">
+            <strong>Requirement:</strong> ${d.requirement}
+        </p>
+
+        <button class="see-more" id="seeMoreBtn" >See more </button>
+      </div>
+
+  `
+  scContainer.appendChild(card);
+
+
+});
+
+});
+
+
+function goToSection(){
+document.getElementById('target').scrollIntoView({ behavior: 'smooth' });
+
+}
+function goToSection2(){
+  document.getElementById('target2').scrollIntoView({ behavior: 'smooth' }); 
 }

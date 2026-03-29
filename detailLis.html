@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listening - Ielts Market</title>
+  </head>
+  <body>
+    <a href="index.html" class="back-btn">← Back</a>
+
+    <div id="detail-container"></div>
+
+    <script src="detaillistening.js"></script>
+
+    <style>
+      body {
+        background: #0f0f0f;
+        font-family: "Segoe UI", Arial, sans-serif;
+        margin: 0;
+        color: white;
+      }
+
+      /* container */
+      .detail-container {
+        max-width: 900px;
+        margin: 60px auto;
+        background: #1a1a1a;
+        padding: 40px;
+        border-radius: 14px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+      }
+
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+
+        padding: 12px 22px;
+        margin-bottom: 25px;
+        margin-top: 10px;
+        font-size: 18px;
+        font-weight: 600;
+
+        color: white;
+        text-decoration: none;
+
+        background: #1f1f1f;
+        border-radius: 10px;
+        border: 1px solid #2e2e2e;
+
+        transition: all 0.25s ease;
+
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      }
+
+      .back-btn:hover {
+        background: #2b2b2b;
+        border-color: #4da6ff;
+        color: #4da6ff;
+
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+      }
+
+      .back-btn:active {
+        transform: scale(0.96);
+      }
+
+      /* video */
+      .video-box {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      .video-box iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+
+      /* title */
+      .video-title {
+        margin-top: 25px;
+        font-size: 28px;
+        font-weight: 700;
+        color: #ffffff;
+      }
+
+      /* description */
+      .video-desc {
+        margin-top: 12px;
+        font-size: 16px;
+        color: #bbbbbb;
+        line-height: 1.6;
+      }
+      .script-btn {
+        margin-top: 20px;
+        padding: 12px 22px;
+
+        border: none;
+        border-radius: 999px;
+
+        background: linear-gradient(135deg, #6366f1, #4f46e5);
+        color: white;
+
+        font-size: 14px;
+        font-weight: 600;
+
+        cursor: pointer;
+
+        box-shadow: 0 8px 20px rgba(79, 70, 229, 0.4);
+
+        transition: all 0.25s ease;
+      }
+
+      .script-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 30px rgba(79, 70, 229, 0.5);
+      }
+
+      .script-btn:active {
+        transform: scale(0.97);
+      }
+    </style>
+  </body>
+</html>

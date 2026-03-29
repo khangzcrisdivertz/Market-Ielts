@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading - Ielts Market</title>
+</head>
+<body>
+
+      <!-- BACK BUTTON -->
+  <a href="index.html" class="reading-back-btn">
+    ← Back to Home
+  </a>
+
+
+<div class="reading-detail-wrapper" id="detail-container">
+  
+
+</div>
+
+<div class="reading-suggest-wrapper">
+
+  <h2 class="reading-suggest-title">
+    You May Also Like
+  </h2>
+
+  <div class="reading-suggest-list" id="suggest-list">
+
+   
+
+  </div>
+
+</div>
+
+   <script src="detailreading.js"></script> 
+   <style>
+   body{
+  margin:0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background:linear-gradient(135deg,#1f2937,#111827);
+  color:#111;
+}
+
+
+/* ===== BACK BUTTON ===== */
+
+.reading-back-btn{
+  position:fixed;
+  top:25px;
+  left:25px;
+
+  padding:10px 18px;
+  border-radius:999px;
+
+  background:#111827;
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+
+  box-shadow:0 8px 20px rgba(0,0,0,0.25);
+  transition:0.25s;
+}
+
+.reading-back-btn:hover{
+  background:#4f46e5;
+  transform:translateY(-2px);
+}
+
+
+/* ===== MAIN READING CARD ===== */
+
+.reading-detail-wrapper{
+  max-width:950px;
+  margin:70px auto;
+  padding:45px;
+
+  background:white;
+  border-radius:18px;
+
+  box-shadow:0 25px 60px rgba(0,0,0,0.35);
+}
+
+
+/* ===== TITLE ===== */
+
+.reading-title{
+  font-size:34px;
+  font-weight:700;
+  margin-bottom:25px;
+
+  border-left:6px solid #6366f1;
+  padding-left:16px;
+}
+
+
+/* ===== PASSAGE ===== */
+
+.reading-passage{
+  font-size:17px;
+  line-height:1.9;
+  color:#374151;
+  margin-bottom:40px;
+}
+
+
+/* ===== QUESTION TITLE ===== */
+
+.reading-question-title{
+  font-size:24px;
+  font-weight:700;
+  margin-bottom:20px;
+  color:#111827;
+}
+
+
+/* ===== QUESTIONS ===== */
+
+.reading-questions{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+
+/* question card */
+
+.reading-question{
+  background:#f9fafb;
+  border:1px solid #e5e7eb;
+
+  padding:20px;
+  border-radius:12px;
+
+  transition:0.2s;
+}
+
+.reading-question:hover{
+  border-color:#6366f1;
+}
+
+
+/* question text */
+
+.reading-question p{
+  font-weight:600;
+  margin-bottom:12px;
+}
+
+
+/* input */
+
+.reading-question input{
+  width:100%;
+  padding:12px;
+
+  border-radius:8px;
+  border:1px solid #d1d5db;
+
+  font-size:15px;
+  transition:0.2s;
+}
+
+.reading-question input:focus{
+  outline:none;
+  border-color:#6366f1;
+  box-shadow:0 0 0 3px rgba(99,102,241,0.2);
+}
+
+
+/* ===== SUBMIT BUTTON ===== */
+
+.reading-submit-btn{
+  margin-top:35px;
+
+  padding:14px;
+  width:100%;
+
+  border:none;
+  border-radius:12px;
+
+  font-size:16px;
+  font-weight:600;
+
+  background:linear-gradient(135deg,#6366f1,#4f46e5);
+  color:white;
+
+  cursor:pointer;
+  transition:0.25s;
+}
+
+.reading-submit-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 25px rgba(79,70,229,0.4);
+}
+
+
+/* ===== SUGGEST SECTION ===== */
+
+.reading-suggest-wrapper{
+  max-width:1100px;
+  margin:70px auto;
+}
+
+.reading-suggest-title{
+  font-size:28px;
+  font-weight:700;
+  color:#fff;
+  margin-bottom:30px;
+}
+
+
+/* GRID */
+
+.reading-suggest-list{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;
+}
+
+
+/* CARD */
+
+.reading-suggest-card{
+  background:white;
+  border-radius:16px;
+
+  padding:22px;
+  text-decoration:none;
+  color:#111;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+
+  min-height:140px;
+
+  box-shadow:0 12px 30px rgba(0,0,0,0.25);
+
+  transition:0.25s;
+}
+
+
+/* hover effect */
+
+.reading-suggest-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 45px rgba(0,0,0,0.35);
+}
+
+
+/* badge */
+
+.suggest-badge{
+  display:inline-block;
+
+  background:#eef2ff;
+  color:#4f46e5;
+
+  font-size:12px;
+  font-weight:600;
+
+  padding:4px 10px;
+  border-radius:999px;
+}
+
+
+/* title */
+
+.suggest-title{
+  font-size:18px;
+  font-weight:600;
+  margin:12px 0 18px 0;
+}
+
+
+/* bottom */
+
+.suggest-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  font-size:13px;
+  color:#6b7280;
+}
+
+
+.arrow{
+  font-size:18px;
+  color:#4f46e5;
+}
+
+   </style>
+</body>
+</html>

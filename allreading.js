@@ -9,7 +9,9 @@ fetch ('https://6975cb8ec0c36a2a994f782f.mockapi.io/allofall')
   
     card.innerHTML = `
            <div class="reading-card__content protest-strike-regular">
-
+<div class="reading-card__image">
+    <img src="${p.img}" alt="${p.title}">
+  </div>
     <h3 class="reading-card__title">
       ${p.title}
     </h3>

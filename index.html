@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home - BocuaIelts</title>
+    <title>Home - IELTS MARKET</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <link rel="stylesheet" href="Style.css" />
@@ -26,15 +26,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Knewave&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
   </head>
+
+  
   <body  style="background-color: #212121">
     <nav class="container-nav main-nav">
       <div class="logo rubik-doodle-shadow-regular">Ielts Market</div>
       <div class="list-nav">
         <li><a href="index.html">Home</a></li>
         <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="#">Ielts practice</a></li>
+        <li><a href="grammar.html">Check Grammar with AI</a></li>
         <li><a href="#">Product to improve</a></li>
-        <li><a href="login.html">Login</a></li>
+        <li><a href="login.html" id="login">Login</a></li>
       </div>
       <div class="input-container">
         <input
@@ -49,8 +51,21 @@
       </div>
     </nav>
 
+    <section class="hero">
+  <div class="hero-content">
+    <h1>Improve Your IELTS Faster</h1>
+   
+
+    <div class="hero-buttons">
+      <a class="hero-btn primary " onclick="goToSection()">Start IMPROVING</a>
+      <a href="#" class="hero-btn secondary" onclick="goToSection2()">IELTS Reading Question</a>
+    </div>
+  </div>
+</section>
+
+<div id="target">
   <div class="reading-header protest-strike-regular">
-  <h4>IELTS Reading – Learn by Levels</h4>
+  <h4 style="padding-left: 40px;">IELTS Reading – Learn by Levels</h4>
   <a 
     href="Reading.html"
     class="see-more-link knewave-regular"
@@ -65,15 +80,55 @@
 
 
 <div class="listening-header protest-strike-regular">
-  <h4>IELTS Listening – Improve by Levels</h4>
+  <h4 style="padding-left: 40px;">IELTS Listening – Improve by Levels</h4>
   <a 
-    href="#"
+    href="listening.html"
     class="see-more-link knewave-regular"
   >
     View full tests
   </a>
 </div>
   <div class="neo-container" id="list-card2"></div>
+
+</div>
+</div>
+
+<div id="target2">
+<section class="reading-ranking">
+    <h2 class="ranking-title protest-strike-regular">Most Common IELTS Reading Question Types</h2>
+
+    <div class="ranking-table">
+
+        <div class="ranking-item rank-1">
+            <span class="rank-number">#1</span>
+            <span class="rank-name">Matching Headings</span>
+        </div>
+
+        <div class="ranking-item rank-2">
+            <span class="rank-number">#2</span>
+            <span class="rank-name">Matching Paragraph Information</span>
+        </div>
+
+        <div class="ranking-item rank-3">
+            <span class="rank-number">#3</span>
+            <span class="rank-name">Matching Features</span>
+        </div>
+
+        <div class="ranking-item rank-4">
+            <span class="rank-number">#4</span>
+            <span class="rank-name">Matching Sentence Endings</span>
+        </div>
+
+    </div>
+</section>
+</div>
+
+
+<!-- UNIVERSITY -->
+<h1 class="university-title protest-strike-regular">Find Your Dream University</h1>
+<div  id="list-card3">
+
+
 
 </div>
 
@@ -86,7 +141,7 @@
 <div class="vertical-ad-card">
   <div class="vertical-ad-image">
     <img
-      src="https://edutrip.edu.vn/wp-content/uploads/2020/11/Destination-B1.jpg"
+      src="https://i0.wp.com/fseenglish.com/wp-content/uploads/2024/05/c914de6a-47c3-4dac-943a-5c2080c3136f.png?fit=1200%2C722&ssl=1"
       alt="Destination"
     />
   </div>

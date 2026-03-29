@@ -3,33 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home - BocuaIelts</title>
-   <link href="Style.css" rel="stylesheet" />
+    <title>IELTS Reading - IELTS Market</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="Style.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Protest+Strike&family=Reem+Kufi+Fun:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik+Doodle+Shadow&family=Rubik+Iso&family=Rubik+Vinyl&family=Sriracha&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&family=Roboto:wght@400;700&family=Rubik+Doodle+Shadow&family=Knewave&display=swap" rel="stylesheet" />
     <link href="index.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Protest+Strike&family=Reem+Kufi+Fun:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik+Doodle+Shadow&family=Rubik+Glitch&family=Rubik+Iso&family=Rubik+Vinyl&family=Sriracha&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body style="background-color: #212121">
-    <nav class="container-nav main-nav">
+     <nav class="container-nav main-nav">
       <div class="logo rubik-doodle-shadow-regular">Ielts Market</div>
       <div class="list-nav">
         <li><a href="index.html">Home</a></li>
-         <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="#">Ielts practice</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="grammar.html">Check Grammar with AI</a></li>
         <li><a href="#">Product to improve</a></li>
-        <li><a href="#">Login</a></li>
+        <li><a href="login.html" id="login">Login</a></li>
       </div>
       <div class="input-container">
         <input
@@ -37,17 +27,20 @@
           type="text"
           name="text"
           class="input"
+          id="searchInput"
         />
+      
+        </ul>
       </div>
     </nav>
 
-  <div class="reading-header protest-strike-regular">
-  <h4>IELTS Reading</h4>
-
-</div>
-   <div class="container-card">
-  <div class="reading-list" id="list-card"></div>
-</div>
+  <div class="reading-header protest-strike-regular" style="display:flex; align-items:center; justify-content:space-between; padding-right:40px; padding-top:30px;">
+    <h4 style="padding-left:40px;">IELTS Reading – Learn by Levels</h4>
+    <a href="#" class="see-more-link knewave-regular">View full tests</a>
+  </div>
+  <div class="container-card">
+    <div class="reading-list" id="list-card"></div>
+  </div>
 
 
 
@@ -70,12 +63,46 @@
     <script src="allreading.js"></script>
 
     <style>
-      .reading-list{
-display: grid;
-grid-template-columns: auto auto auto auto  auto;
-gap: 9px;
-      }
+    
+.reading-list{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:18px;
+  width:90%;
+  margin:40px auto;
+}
 
+/* CARD */
+
+.reading-card{
+  background:#2b2b2b;
+  border-radius:14px;
+  padding:20px;
+  color:white;
+  border:1px solid #3a3a3a;
+  transition:all 0.25s ease;
+  cursor:pointer;
+}
+
+.reading-card h3{
+  margin:0;
+  font-size:20px;
+}
+
+.reading-card p{
+  margin-top:8px;
+  font-size:14px;
+  color:#bdbdbd;
+}
+
+/* HOVER EFFECT */
+
+.reading-card:hover{
+  transform:translateY(-3px);
+  background:#303030;
+  border:1px solid #4da3ff;
+  box-shadow:0 8px 20px rgba(0,0,0,0.4);
+}
 
 
       body {
@@ -97,14 +124,20 @@ gap: 9px;
       }
       .list-nav {
         display: flex;
-        gap: 90px;
+        gap: 40px;
       }
       .main-nav a {
-        font-size: 20px;
+        font-size: 18px;
         display: block;
         text-decoration: none;
         color: rgb(255, 255, 255);
+        transition: color 0.2s;
       }
+      .list-nav a:hover { color: #a78bfa; }
+      .list-nav a.active { color: #a78bfa; font-weight: 700; }
+      .reading-header h4 { color: #fff; font-size: 22px; }
+      .see-more-link { color: #a78bfa; text-decoration: none; font-size: 18px; transition: color 0.2s; }
+      .see-more-link:hover { color: #c4b5fd; }
 
       .protest-strike-regular {
         font-family: "Protest Strike", sans-serif;
@@ -117,6 +150,7 @@ gap: 9px;
         font-weight: 400;
         font-style: normal;
       }
+
     </style>
   </body>
 </html>
